@@ -1,0 +1,76 @@
+{% load static %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Registration</h1>-->
+<!--<form  action=" " method="post">-->
+<!--	{% csrf_token %}-->
+<!--			<label>Name</label>-->
+<!--			<input type="text" name="username" placeholder="Enter your username">-->
+<!--			<br><br>-->
+<!--            <label>First name</label>-->
+<!--			<input type="text" name="first_name" placeholder="Enter your firstname">-->
+<!--			<br><br>-->
+<!--            <label>Last name</label>-->
+<!--			<input type="text" name="last_name" placeholder="Enter your lastname">-->
+<!--			<br><br>-->
+<!--			<label>Email</label>-->
+<!--			<input type="email" name="email" placeholder="Enter your email">-->
+<!--			<br><br>-->
+<!--			<label>Password</label>-->
+<!--			<input type="password" name="password" placeholder="Enter your password">-->
+<!--			<br><br>-->
+<!--			<label>Confirm Password</label>-->
+<!--			<input type="password" name="password1" placeholder="Confirm your password">-->
+<!--			<br><br>-->
+<!--			<input type="submit">-->
+<!--		</form>-->
+<!--{% for i in messages %}-->
+<!--<h2> {{i}} </h2>-->
+<!--{% endfor %}-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SignUp Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>Creative SignUp Form</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="#" method="post">
+					{% csrf_token %}
+					<input type="text" name="username" placeholder="Username" required=""><br>
+					<input type="text" name="first_name" placeholder="Firstname" required=""><br>
+					<input type="text" name="last_name" placeholder="Lastname" required=""><br>
+					<input type="email" name="email" placeholder="Email" required=""><br>
+					<input type="password" name="password" placeholder="Password" required=""><br>
+					<input type="password" name="password1" placeholder="Confirm Password" required=""><br>
+					<input type="submit" value="SIGNUP">
+				</form>
+				{% for i in messages %}
+				<h3 style="color:white"> {{i}} </h3>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- //main -->
+</body>
+</html>
